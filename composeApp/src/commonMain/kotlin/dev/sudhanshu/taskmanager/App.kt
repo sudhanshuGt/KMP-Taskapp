@@ -36,8 +36,6 @@ import io.kamel.image.KamelImage
 import io.kamel.image.asyncPainterResource
 import io.ktor.http.Url
 
-
-
 @Composable
 fun App(
     viewModel: AuthViewModel,
@@ -134,6 +132,8 @@ fun AuthenticationLoadingScreen() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         CircularProgressIndicator()
+        Spacer(modifier = Modifier.height(16.dp))
+        Text(text = "Authenticating...")
     }
 }
 

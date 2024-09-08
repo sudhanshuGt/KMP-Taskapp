@@ -27,13 +27,7 @@ This is a Task Manager application built with Kotlin Multiplatform. It supports 
 - **Task Detail Screen**
   ![Android Task Detail](docs/screenshots/android_task_detail.png)
 
-### iOS
-
-- **Home Screen**
-  ![iOS Home Screen](docs/screenshots/ios_home.png)
-
-- **Task Detail Screen**
-  ![iOS Task Detail](docs/screenshots/ios_task_detail.png)
+ 
 
 ## Getting Started
 
@@ -48,4 +42,4 @@ This is a Task Manager application built with Kotlin Multiplatform. It supports 
 1. **Clone the Repository**
 
    ```sh
-   git clone https://github.com/your-repo/task-manager.git
+   git clone https://github.com/sudhanshuGt/KMP-Taskapp
