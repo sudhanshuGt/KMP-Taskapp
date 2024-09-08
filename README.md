@@ -22,21 +22,19 @@ This is a Task Manager application built with Kotlin Multiplatform. It supports 
 ### Android
 
 - **Start**
-  ![Start](https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/Start.png)
+  <img src="https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/Start.png" alt="Start" width="400"/>
 
 - **Home**
-  ![Home screen](https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/home.png)
+  <img src="https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/home.png" alt="Home" width="400"/>
 
 - **Dashboard**
-  ![Dashboard screen](https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/dashboard.png)
+  <img src="https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/dashboard.png" alt="Dashboard" width="400"/>
 
 - **Profile**
-  ![Profile screen](https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/profile.png)
+  <img src="https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/profile.png" alt="Profile" width="400"/>
 
 - **Add and update**
-  ![Add update task screen](https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/AddEdit.png)
-
- 
+  <img src="https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/AddEdit.png" alt="Add and update task" width="400"/>
 
 ## Getting Started
 
@@ -51,4 +49,4 @@ This is a Task Manager application built with Kotlin Multiplatform. It supports 
 1. **Clone the Repository**
 
    ```sh
-   git clone https://github.com/sudhanshuGt/KMP-Taskapp
+   git clone https://github.com/sudhanshuGt/KMP-Taskapp.git
