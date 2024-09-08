@@ -21,11 +21,20 @@ This is a Task Manager application built with Kotlin Multiplatform. It supports 
 
 ### Android
 
-- **Home Screen**
-  ![Android Home Screen](docs/screenshots/android_home.png)
+- **Start**
+  ![Start](https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/Start.png)
 
-- **Task Detail Screen**
-  ![Android Task Detail](docs/screenshots/android_task_detail.png)
+- **Home**
+  ![Home screen](https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/home.png)
+
+- **Dashboard**
+  ![Dashboard screen](https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/dashboard.png)
+
+- **Profile**
+  ![Profile screen](https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/profile.png)
+
+- **Add and update**
+  ![Add update task screen](https://github.com/sudhanshuGt/KMP-Taskapp/blob/main/screen_shots/AddEdit.png)
 
  
 
