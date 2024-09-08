@@ -1,0 +1,18 @@
+CREATE TABLE User (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL
+);
+
+insertUser:
+INSERT INTO User(email, password) VALUES (?, ?);
+
+getUserByEmail:
+SELECT * FROM User WHERE email = ?;
+
+deleteData:
+DELETE  FROM User;
+
+getUserEmail:
+SELECT email FROM User ORDER BY id ASC LIMIT 1;
+

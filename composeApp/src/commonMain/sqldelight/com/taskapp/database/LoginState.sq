@@ -1,0 +1,14 @@
+CREATE TABLE LoginState (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    userId INTEGER NOT NULL,
+    FOREIGN KEY(userId) REFERENCES User(id) ON DELETE CASCADE
+);
+
+insertLoginState:
+INSERT INTO LoginState(userId) VALUES (?);
+
+selectAll:
+SELECT * FROM LoginState ORDER BY id ASC LIMIT 1;
+
+deleteAll:
+DELETE FROM LoginState;

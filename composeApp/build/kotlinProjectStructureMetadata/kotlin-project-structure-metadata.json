@@ -1,0 +1,67 @@
+{
+  "projectStructure": {
+    "formatVersion": "0.3.3",
+    "isPublishedAsRoot": "true",
+    "variants": [
+      {
+        "name": "iosArm64ApiElements",
+        "sourceSet": [
+          "iosMain",
+          "commonMain"
+        ]
+      },
+      {
+        "name": "iosX64ApiElements",
+        "sourceSet": [
+          "iosMain",
+          "commonMain"
+        ]
+      }
+    ],
+    "sourceSets": [
+      {
+        "name": "commonMain",
+        "dependsOn": [],
+        "moduleDependency": [
+          "com.squareup.sqldelight:runtime",
+          "org.jetbrains.kotlin:kotlin-stdlib"
+        ],
+        "binaryLayout": "klib"
+      },
+      {
+        "name": "iosMain",
+        "dependsOn": [
+          "commonMain"
+        ],
+        "moduleDependency": [
+          "com.squareup.sqldelight:runtime",
+          "org.jetbrains.kotlin:kotlin-stdlib",
+          "org.jetbrains.compose.runtime:runtime",
+          "org.jetbrains.compose.foundation:foundation",
+          "com.google.android.material:material",
+          "org.jetbrains.compose.material3:material3",
+          "org.jetbrains.compose.ui:ui",
+          "io.ktor:ktor-client-core",
+          "androidx.legacy:legacy-support-core-utils",
+          "org.jetbrains.compose.components:components-resources",
+          "com.squareup.sqldelight:coroutines-extensions",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core",
+          "media.kamel:kamel-image",
+          "org.jetbrains.androidx.navigation:navigation-compose",
+          "dev.icerock.moko:mvvm-core",
+          "dev.icerock.moko:mvvm-compose",
+          "io.insert-koin:koin-core",
+          "io.insert-koin:koin-compose",
+          "androidx.biometric:biometric",
+          "io.github.aakira:napier",
+          "network.chaintech:kmp-date-time-picker",
+          "androidx.core:core-i18n",
+          "com.squareup.sqldelight:native-driver"
+        ],
+        "sourceSetCInteropMetadataDirectory": "iosMain-cinterop",
+        "binaryLayout": "klib",
+        "hostSpecific": "true"
+      }
+    ]
+  }
+}

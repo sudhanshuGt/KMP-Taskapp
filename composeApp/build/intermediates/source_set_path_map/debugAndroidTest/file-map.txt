@@ -1,0 +1,4 @@
+dev.sudhanshu.taskmanager.test.composeApp-androidTest-0 F:\androidstudioproject\KMM-TaskManager\composeApp\build\generated\res\resValues\androidTest\debug
+dev.sudhanshu.taskmanager.test.composeApp-mergeDebugAndroidTestResources-1 F:\androidstudioproject\KMM-TaskManager\composeApp\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+dev.sudhanshu.taskmanager.test.composeApp-mergeDebugAndroidTestResources-2 F:\androidstudioproject\KMM-TaskManager\composeApp\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+dev.sudhanshu.taskmanager.test.composeApp-merged_res-3 F:\androidstudioproject\KMM-TaskManager\composeApp\build\intermediates\merged_res\debugAndroidTest

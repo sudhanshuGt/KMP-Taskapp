@@ -1,0 +1,33 @@
+CREATE TABLE Task (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    description TEXT,
+    dueDate TEXT,
+    status INTEGER NOT NULL
+);
+
+-- Query to select all tasks
+selectAllTasks:
+SELECT * FROM Task;
+
+-- Query to insert a new task
+insertTask:
+INSERT INTO Task (title, description, dueDate, status) VALUES (?, ?, ?, ?);
+
+-- Query to update an existing task
+updateTask:
+UPDATE Task
+SET title = ?, description = ?, dueDate = ?, status = ?
+WHERE id = ?;
+
+-- Query to delete a task by its ID
+deleteTaskById:
+DELETE FROM Task WHERE id = ?;
+
+-- Query to delete all tasks
+deleteAllTasks:
+DELETE FROM Task;
+
+-- Query to select a task by its ID
+selectTaskById:
+SELECT * FROM Task WHERE id = ?;
