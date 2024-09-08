@@ -36,55 +36,29 @@ import io.kamel.image.KamelImage
 import io.kamel.image.asyncPainterResource
 import io.ktor.http.Url
 
+// entry point for app
+
 @Composable
 fun App(
     viewModel: AuthViewModel,
-    biometricAuth: BiometricAuthenticator,
+    biometricAuth: BiometricAuthenticator?,
     taskViewModel: TaskViewModel,
     hapticFeedback: HapticFeedback
 ) {
     val state = viewModel.state.collectAsState()
+    var biometricAuthTriggered by remember { mutableStateOf(false) }
+    var authenticationFailed by remember { mutableStateOf(false) }
     val navHost = rememberNavController()
 
-    var isBiometricAuthenticated by remember { mutableStateOf(false) }
-    var authenticationFailed by remember { mutableStateOf(false) }
-    var isAuthenticating by remember { mutableStateOf(true) }
-
-    LaunchedEffect(Unit) {
-        if (state.value.isLoggedIn) {
-            biometricAuth.authenticate(
-                onSuccess = {
-                    isBiometricAuthenticated = true
-                    isAuthenticating = false
-                },
-                onFailure = {
-                    authenticationFailed = true
-                    isAuthenticating = false
-                }
-            )
-        } else {
-            isAuthenticating = false
-        }
-    }
-
     MaterialTheme {
-        if (isAuthenticating) {
-            AuthenticationLoadingScreen()
-        } else if (authenticationFailed) {
-            AuthenticationFailedScreen(onRetryClick = {
-                isAuthenticating = true
-                biometricAuth.authenticate(
-                    onSuccess = {
-                        isBiometricAuthenticated = true
-                        isAuthenticating = false
-                    },
-                    onFailure = {
-                        authenticationFailed = true
-                        isAuthenticating = false
-                    }
-                )
-            })
-        } else if (isBiometricAuthenticated || !state.value.isLoggedIn) {
+        LaunchedEffect(Unit){
+            viewModel.checkLoginState()
+        }
+        if (state.value.isLoggedIn) {
+            Napier.d("--MAIN--, isLoggedIn: ${state.value.isLoggedIn}")
+            RootNavGraph(viewModel, navHost, taskViewModel, hapticFeedback)
+
+        } else {
             NavHost(navHost, startDestination = "start") {
                 composable("start") {
                     Start(onSignInClick = {
@@ -106,34 +80,7 @@ fun App(
                     RootNavGraph(viewModel, navHost, taskViewModel, hapticFeedback)
                 }
             }
-        } else {
-            AuthenticationFailedScreen(onRetryClick = {
-                isAuthenticating = true
-                biometricAuth.authenticate(
-                    onSuccess = {
-                        isBiometricAuthenticated = true
-                        isAuthenticating = false
-                    },
-                    onFailure = {
-                        authenticationFailed = true
-                        isAuthenticating = false
-                    }
-                )
-            })
         }
-    }
-}
-
-@Composable
-fun AuthenticationLoadingScreen() {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        CircularProgressIndicator()
-        Spacer(modifier = Modifier.height(16.dp))
-        Text(text = "Authenticating...")
     }
 }
 
@@ -144,6 +91,7 @@ fun AuthenticationFailedScreen(onRetryClick: () -> Unit) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+
         KamelImage(
             resource = asyncPainterResource(data = Url("https://cdn-icons-png.flaticon.com/128/7266/7266696.png")),
             contentDescription = "Illustration",
@@ -159,7 +107,10 @@ fun AuthenticationFailedScreen(onRetryClick: () -> Unit) {
         )
         Spacer(modifier = Modifier.height(16.dp))
         Text(text = "Authentication is required to use the app")
+
+
         Spacer(modifier = Modifier.height(16.dp))
+
         Button(onClick = onRetryClick) {
             Text(text = "Authenticate Again")
         }
