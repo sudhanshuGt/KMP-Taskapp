@@ -17,9 +17,9 @@ This is a Task Manager application built with Kotlin Multiplatform. It supports 
   - Haptic feedback on task completion
   - Biometric authentication (fingerprint or face recognition)
 
-## App link
+## APP LINK
 
-  ![Apk](https://drive.google.com/file/d/1S612IOkNVe7O_Wf5URJKcsP1wg4FH2Eq/view?usp=sharing)
+[Download the app](https://drive.google.com/file/d/1S612IOkNVe7O_Wf5URJKcsP1wg4FH2Eq/view?usp=sharing)
 
 ## Screenshots
 
