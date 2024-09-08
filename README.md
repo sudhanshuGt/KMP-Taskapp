@@ -1,15 +1,51 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# Task Manager App
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+## Overview
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+This is a Task Manager application built with Kotlin Multiplatform. It supports Android and iOS platforms and allows users to manage their tasks effectively. The app features task creation, editing, deletion, and completion tracking. It also includes biometric authentication and haptic feedback for enhanced user experience.
 
+## Features
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…"# KMM-TaskManager" 
-"# KMP-Taskapp" 
+- **Task Management**
+  - Add new tasks
+  - Edit existing tasks
+  - Delete tasks
+  - Mark tasks as completed
+
+- **User Interface**
+  - Beautiful and responsive UI using Jetpack Compose for Android and SwiftUI for iOS
+  - Haptic feedback on task completion
+  - Biometric authentication (fingerprint or face recognition)
+
+## Screenshots
+
+### Android
+
+- **Home Screen**
+  ![Android Home Screen](docs/screenshots/android_home.png)
+
+- **Task Detail Screen**
+  ![Android Task Detail](docs/screenshots/android_task_detail.png)
+
+### iOS
+
+- **Home Screen**
+  ![iOS Home Screen](docs/screenshots/ios_home.png)
+
+- **Task Detail Screen**
+  ![iOS Task Detail](docs/screenshots/ios_task_detail.png)
+
+## Getting Started
+
+### Prerequisites
+
+- **Kotlin**: Ensure you have Kotlin 1.8 or higher installed.
+- **Android Studio**: For Android development.
+- **Xcode**: For iOS development.
+
+### Setup
+
+1. **Clone the Repository**
+
+   ```sh
+   git clone https://github.com/your-repo/task-manager.git
